@@ -15,6 +15,9 @@ hr{
   border: none;
   border-top: 1px solid #dedede;
 }
+ol,ul{
+  list-style: none;
+}
 .clearfix::after{
   content: '';
   display: block;
@@ -88,11 +91,12 @@ hr{
   background-color: rgba(0, 0, 0, 0.5);
 }
 .usercard{
-  border: 1px solid red;
+  border: 1px solid #cdcfd1;
   max-width: 900px;
   background: #fff;
   margin-right: auto;
   margin-left: auto;
+  box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);
 }
 .usercard .welcome{
   background: #e6686a;
@@ -177,13 +181,116 @@ body > main .downloadresume-wrapper{
   text-align: center;
 }
 body > main .downloadresume{
-  border: 1px solid #000 ;
   font-size: 15px;
+  border: 1px solid #cdcfd1;
+  font-family: Song typeface;
   padding: 21px 55px;
   margin-top: 30px;
   line-height: 16px;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 3px;
   font-weight: bold;
-  background: #b9b8b8;
+  background: #EFEFEF;
+  transition: box-shadow 0.3s;
+}
+body > main .downloadresume:hover{
+  box-shadow: 0px 5px 15px 1px rgba(153,153,153,1);
+}
+body > main .introduction{
+  text-align: center;
+  padding: 30px;
+}
+.skills,
+.portfolio{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+.skills > h2,
+.portfolio > h2{
+  text-align: center;
+  line-height: 1.2;
+  color: rgb(112, 112, 112);
+  font-size: 30px;
+  font-weight: 100px;
+}
+.skills > ol{
+  margin-top: 30px;
+  background: white;
+  padding: 30px 20px 0 50px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);
+}
+.skills .progressBar{
+  background:rgb(253, 210, 210);
+  height: 5px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+.skills .progressBar .progress{
+  background:  rgb(250, 113, 113);
+  height: 5px;
+  border-radius: 2px;
+}
+section > ol > li{
+  float: left;
+  width: 50%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+.portfolio > nav > ol > li{
+  float: left;
+  padding-left: 40px;
+  cursor: pointer;
+}
+.portfolio > nav > ol{
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+.portfolio > nav{
+  text-align: center;
+  margin-top: 30px;
+}
+.portfolio > nav > ol > li:first-child{
+  padding-left: 0;
+}
+.portfolio .bar{
+  height: 5px;
+  background: white;
+  border-radius: 2px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  width: 241px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio .bar .bar-inner{
+ height: 100%;
+ border-radius: 2px;
+ background:  rgb(250, 113, 113);
+ transition: all 0.3s;
+}
+.portfolio .bar.state-1 .bar-inner{
+  margin-left: 0;
+  width: 35px;
+ }
+ .portfolio .bar.state-2 .bar-inner{
+  margin-left: 75px;
+  width: 35px;
+ }
+ .portfolio .bar.state-3 .bar-inner{
+  margin-left:150px;
+  width: 90px;
+ }
+.portfolio .jobs{
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+ }
+ .portfolio .jobs .big,
+ .portfolio .jobs .small{
+  position: absolute;
 }
