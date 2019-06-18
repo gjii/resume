@@ -1,296 +1,87 @@
-body{
-  background: #EFEFEF;
-  color: black;
-  margin: 0;
-}
-a{
-  text-decoration: none;
-}
-*{
-  margin: 0;
-  padding: 0;
-}
-hr{
-  height: 0;
-  border: none;
-  border-top: 1px solid #dedede;
-}
-ol,ul{
-  list-style: none;
-}
-.clearfix::after{
-  content: '';
-  display: block;
-  clear: both;
-}
-.topNavBar {
-  padding: 20px 0 20px 0;
-  position: fixed;
-  left: 0;
-  top:0;
-  width: 100%;
-}
-.topNavBar-inner{
-  padding: 0 16px;
-}
-.topNavBar .logo {
-  font-family: "Arial Black";
-  font-size: 24px;
-  padding-top: 3px;
-  padding-bottom: 4px;
-}
-.topNavBar .logo .rs{
-  color: #e6686a;
-  margin-right: 4px;
-}
-.topNavBar .logo .card{
-  color: #9A9DA2;
-}
-.topNavBar nav {
-  font-size: 13px;
-  padding-top: 7px;
-  padding-bottom: 5px;
-}
-.topNavBar nav a{
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-weight: bold;
-}
-.topNavBar nav ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.topNavBar nav ul>li{
-  float: left;
-  margin-left: 17px;
-  margin-right: 17px;
-}
-.topNavBar nav ul>li>a{
-  font-size: 12px;
-  color: #b7b7b7;
-  text-decoration: none;
-  font-weight: bold;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: block;
-}
-.topNavBar nav ul>li>a:hover{
-  border-bottom:3px solid #DC6465;
-}
-.banner{
-  height: 515px;
-  background-image: url(./img/rs-c.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-.banner .mask{
-  height: 515px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.usercard{
-  border: 1px solid #cdcfd1;
-  max-width: 900px;
-  background: #fff;
-  margin-right: auto;
-  margin-left: auto;
-  box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);
-}
-.usercard .welcome{
-  background: #e6686a;
-  color: white;
-  display: inline-block;
-  padding: 4px 16px 4px 16px;
-  line-height: 22px;
-  position: relative;
-  margin-bottom: 10px;
-}
-.usercard .welcome .triangle{
-  display: block;
-  border: 10px solid transparent;
-  width: 0;
-  border-left-color: #e6686a;
-  border-top-width: 0;
-  position: absolute;
-  top: 100%;
-  left: 4px;
-}
-.usercard .picture{
-  float: left;
-}
-.usercard .text{
-  float: left;
-  margin-left: 50px;
-  width: 400px;
-}
-.usercard .pictureAndText{
-  padding: 50px;
-}
-.usercard .text h1{
-  margin-top: 16px;
-}
-.usercard .text hr{
-  margin: 20px 0;
-}
+body{background: #EFEFEF;color: black;margin: 0;}
+a{text-decoration: none;}
+*{margin: 0;padding: 0;}
+hr{height: 0;border: none;border-top: 1px solid #dedede;}
+ol,ul{list-style: none;}
+.clearfix::after{content: '';display: block;clear: both;}
+.topNavBar {padding: 20px 0 20px 0;position: fixed;left: 0;top:0;width: 100%;}
+.topNavBar-inner{padding: 0 16px;}
+
+.topNavBar .logo {font-family: "Arial Black";font-size: 24px;padding-top: 3px;padding-bottom: 4px;}
+.topNavBar .logo .rs{color: #e6686a; margin-right: 4px;}
+.topNavBar .logo .card{ color: #9A9DA2;}
+
+.topNavBar nav {font-size: 13px;padding-top: 7px;padding-bottom: 5px;}
+.topNavBar nav a{color: rgba(255, 255, 255, 0.7);text-decoration: none;font-weight: bold;}
+.topNavBar nav ul{list-style: none;padding: 0;margin: 0;}
+.topNavBar nav ul>li{float: left;margin-left: 17px;margin-right: 17px;}
+.topNavBar nav ul>li>a{font-size: 12px;color: #b7b7b7;text-decoration: none;font-weight: bold;
+  border-top: 3px solid transparent;border-bottom: 3px solid transparent;
+  padding-top: 5px;padding-bottom: 5px;display: block;}
+.topNavBar nav ul>li>a:hover{border-bottom:3px solid #DC6465;}
+
+.banner{height: 515px;background-image: url(./img/rs-c.jpg);background-position: center center;
+  background-size: cover;}
+.banner .mask{height: 515px;background-color: rgba(0, 0, 0, 0.5);}
+
+.usercard{border: 1px solid #cdcfd1;max-width: 900px;background: #fff;margin-right: auto;
+  margin-left: auto;box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);}
+.usercard .welcome{background: #e6686a;color: white;display: inline-block;padding: 4px 16px 4px 16px;
+  line-height: 22px;position: relative;margin-bottom: 10px;}
+.usercard .welcome .triangle{display: block;border: 10px solid transparent;width: 0;
+  border-left-color: #e6686a;border-top-width: 0;position: absolute;top: 100%;left: 4px;}
+.usercard .picture{float: left;}
+.usercard .text{float: left;margin-left: 50px;width: 400px;}
+.usercard .pictureAndText{padding: 50px;}
+.usercard .text h1{margin-top: 16px;}
+.usercard .text hr{margin: 20px 0;}
 .usercard dl dt,
-.usercard dl dd{
-  float: left;
-  margin-top: 15px;
-}
-.usercard dl dt{
-  width: 30%;
-  font-weight: bold;
-}
-.usercard dl dd{
-  width: 70%;
-  color: #9da0a7;
-}
-.usercard > footer.media{
-background: #e6686a;
-text-align: center;
-}
-.usercard > footer.media > a{
-  display: inline-block;
-  width: 40px;
-  line-height: 30px;
-  padding: 5px 0;
-  border-radius:50%;
-  margin: 12px;
-}
-.usercard > footer.media > a:hover{
-  background: #cf505f;
-}
-.usercard svg{
-  width: 30px;
-  height: 30px;
-  fill: white;
-  vertical-align: top;
-}
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
-body > main{
-  margin-top: -300px;
-}
-body > main .downloadresume-wrapper{
-  text-align: center;
-}
-body > main .downloadresume{
-  font-size: 15px;
-  border: 1px solid #cdcfd1;
-  font-family: Song typeface;
-  padding: 21px 55px;
-  margin-top: 30px;
-  line-height: 16px;
-  display: inline-block;
-  border-radius: 3px;
-  font-weight: bold;
-  background: #EFEFEF;
-  transition: box-shadow 0.3s;
-}
-body > main .downloadresume:hover{
-  box-shadow: 0px 5px 15px 1px rgba(153,153,153,1);
-}
-body > main .introduction{
-  text-align: center;
-  padding: 30px;
-}
+.usercard dl dd{float: left;margin-top: 15px;}
+.usercard dl dt{width: 30%;font-weight: bold;}
+.usercard dl dd{width: 70%;color: #9da0a7;}
+.usercard > footer.media{background: #e6686a;text-align: center;}
+.usercard > footer.media > a{display: inline-block;width: 40px;line-height: 30px;padding: 5px 0;
+  border-radius:50%;margin: 12px;}
+.usercard > footer.media > a:hover{background: #cf505f;}
+.usercard svg{width: 30px;height: 30px;fill: white;vertical-align: top;}
+
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+body > main{margin-top: -300px;}
+body > main .downloadresume-wrapper{text-align: center;}
+body > main .downloadresume{font-size: 15px;border: 1px solid #cdcfd1;font-family: Song typeface;
+  padding: 21px 55px;margin-top: 30px;line-height: 16px;display: inline-block;border-radius: 3px;
+  font-weight: bold;background: #EFEFEF;transition: box-shadow 0.3s;}
+body > main .downloadresume:hover{box-shadow: 0px 5px 15px 1px rgba(153,153,153,1);}
+body > main .introduction{text-align: center;padding: 30px;}
+
 .skills,
-.portfolio{
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-}
+.portfolio{max-width: 940px;margin-left: auto;margin-right: auto;margin-top: 60px;}
 .skills > h2,
-.portfolio > h2{
-  text-align: center;
-  line-height: 1.2;
-  color: rgb(112, 112, 112);
-  font-size: 30px;
-  font-weight: 100px;
-}
-.skills > ol{
-  margin-top: 30px;
-  background: white;
-  padding: 30px 20px 0 50px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);
-}
-.skills .progressBar{
-  background:rgb(253, 210, 210);
-  height: 5px;
-  border-radius: 2px;
-  margin-top: 5px;
-}
-.skills .progressBar .progress{
-  background:  rgb(250, 113, 113);
-  height: 5px;
-  border-radius: 2px;
-}
-section > ol > li{
-  float: left;
-  width: 50%;
-  margin-bottom: 40px;
-  box-sizing: border-box;
-  padding-right: 30px;
-}
-.portfolio > nav > ol > li{
-  float: left;
-  padding-left: 40px;
-  cursor: pointer;
-}
-.portfolio > nav > ol{
-  margin: 0 auto;
-  display: inline-block;
-  vertical-align: top;
-}
-.portfolio > nav{
-  text-align: center;
-  margin-top: 30px;
-}
-.portfolio > nav > ol > li:first-child{
-  padding-left: 0;
-}
-.portfolio .bar{
-  height: 5px;
-  background: white;
-  border-radius: 2px;
-  margin-bottom: 30px;
-  margin-top: 5px;
-  width: 241px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.portfolio .bar .bar-inner{
- height: 100%;
- border-radius: 2px;
- background:  rgb(250, 113, 113);
- transition: all 0.3s;
-}
-.portfolio .bar.state-1 .bar-inner{
-  margin-left: 0;
-  width: 35px;
- }
- .portfolio .bar.state-2 .bar-inner{
-  margin-left: 75px;
-  width: 35px;
- }
- .portfolio .bar.state-3 .bar-inner{
-  margin-left:150px;
-  width: 90px;
- }
-.portfolio .jobs{
-  margin: 0 auto;
-  position: relative;
-  width: 900px;
- }
- .portfolio .jobs .big,
- .portfolio .jobs .small{
-  position: absolute;
-}
+.portfolio > h2{text-align: center;line-height: 1.2;color: rgb(112, 112, 112);font-size: 30px;
+  font-weight: 100px;}
+.skills > ol{margin-top: 30px;background: white;padding: 30px 20px 0 50px;border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);}
+.skills .progressBar{background:rgb(253, 210, 210);height: 5px;border-radius: 2px;margin-top: 5px;}
+.skills .progressBar .progress{background:  rgb(250, 113, 113);height: 5px;border-radius: 2px;}
+section > ol > li{float: left;width: 50%;margin-bottom: 40px;box-sizing: border-box;padding-right: 30px;}
+
+.portfolio > nav > ol > li{float: left;padding-left: 40px;cursor: pointer;}
+.portfolio > nav > ol{margin: 0 auto;display: inline-block;vertical-align: top;}
+.portfolio > nav{text-align: center;margin-top: 30px;}
+.portfolio > nav > ol > li:first-child{padding-left: 0;}
+.portfolio .bar{height: 5px;background: white;border-radius: 2px;margin-bottom: 30px;margin-top: 5px;
+  width: 241px;margin-left: auto;margin-right: auto;}
+.portfolio .bar .bar-inner{height: 100%;border-radius: 2px;background:  rgb(250, 113, 113);
+  transition: all 0.3s;}
+.portfolio .bar.state-1 .bar-inner{margin-left: 0;width: 35px;}
+.portfolio .bar.state-2 .bar-inner{margin-left: 75px;width: 35px;}
+.portfolio .bar.state-3 .bar-inner{margin-left:150px;width: 90px;}
+.portfolio .jobs{margin: 0 auto;position: relative;width: 900px;}
+.portfolio .jobs .big,
+.portfolio .jobs .small{position: absolute;}
+
+.loading{width:200px;height:200px;border:1px solid red;position:relative;}
+.loading::before,.loading::after{content:'';position:absolute;width:0px;height:0px;background:black;
+  border-radius: 50%;top:0;left:0;bottom:0;right:0;margin:auto;animation: s 1.5s linear infinite; }
+.loading::after{animation-delay: 0.75s;}
+@keyframes s{0%{width:0px;height:0px;opacity:1;}100%{width:100px;height:100px;opacity:0;}}
