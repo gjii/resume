@@ -1,237 +1,267 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>郭江的个人简历</title>
-    <link rel="stylesheet" href="./loading.css">
-    <link rel="stylesheet" href="./a.css">
-    <script src="//at.alicdn.com/t/font_898436_4hgx8q0s7bu.js"></script>
-    <style type="text/css">
-    .site-welcome{
+
+<head>
+  <title>郭江的个人简历</title>
+  <link rel="stylesheet" href="./loading.css">
+  <link rel="stylesheet" href="./a.css">
+  <script src="//at.alicdn.com/t/font_898436_4hgx8q0s7bu.js"></script>
+  <style type="text/css">
+    .site-welcome {
       background: #888;
       position: fixed;
-      top:0; left:0; width:100%; height:100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 10;
       display: none;
       justify-content: center;
       align-items: center;
     }
-    .active{
+
+    .active {
       display: flex;
     }
-    </style>
-  </head>
-  <body>
-    <div id="siteWelcome" class="site-welcome active">
-      <div class="loading"></div>
+  </style>
+</head>
+
+<body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+  </div>
+  <div id="topNavBar" class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left; ">
+        <span class="rs">RS</span><span class="card">card</span>
+      </a>
+      <nav class='menu' style="float: right;">
+        <ul class="clearfix">
+          <li><a href="#siteAbout">关于</a></li>
+          <li><a href="#siteSkills">技能</a></li>
+          <li><a href="#siteWorks">作品</a>
+            <ul class="submenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
+            </ul>
+          </li>
+          <li><a href="#">博客</a>
+            <ul class="submenu">
+              <li>博客1</li>
+              <li>博客2</li>
+              <li>博客3</li>
+            </ul>
+          </li>
+          <li><a href="#">日历</a></li>
+          <li><a href="#">其他</a></li>
+        </ul>
+      </nav>
     </div>
-    <div id="topNavBar" class="topNavBar">
-      <div class="topNavBar-inner clearfix">
-          <a class="logo" href="#" alt="logo" style="float: left; ">
-            <span class="rs">RS</span><span class="card">card</span>
-          </a>
-            <nav class='menu'style="float: right;">
-              <ul class="clearfix">
-                <li><a href="#siteAbout">关于</a></li>
-                <li><a href="#siteSkills">技能</a></li>
-                <li><a href="#siteWorks">作品</a>
-                  <ul class="submenu">
-                    <li>作品1</li>
-                    <li>作品2</li>
-                    <li>作品3</li>
-                  </ul>
-                </li>
-                <li><a href="#">博客</a>
-                  <ul class="submenu">
-                    <li>博客1</li>
-                    <li>博客2</li>
-                    <li>博客3</li>
-                  </ul>
-                </li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">其他</a></li>
-              </ul>
-            </nav>
-      </div>
-    </div>
-    <div class="banner">
-        <div class="mask"></div>
-    </div>  
-    <main>
-      <div class="usercard" id="siteAbout">
-        <div class="pictureAndText clearfix">
-          <div class="picture">
-            <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
-          </div>
-          <div class="text">
-            <div class="profile">
-              <span class="welcome">Hello
-                <span class="triangle"></span>
-              </span>
-              <h1>郭江</h1>
-              <p>前端开发工程师</p>
-              <hr>
-              <dl>
-                <dt>年龄</dt>
-                <dd>25</dd>
-                <dt>所在城市</dt>
-                <dd>重庆</dd>
-                <dt>邮箱</dt>
-                <dd>1119157955@qq.com</dd>
-                <dt>手机</dt>
-                <dd>18328671178</dd>
-              </dl>
-            </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+    <div class="usercard" id="siteAbout">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
+        </div>
+        <div class="text">
+          <div class="profile">
+            <span class="welcome">Hello
+              <span class="triangle"></span>
+            </span>
+            <h1>郭江</h1>
+            <p>前端开发工程师</p>
+            <hr>
+            <dl>
+              <dt>年龄</dt>
+              <dd>25</dd>
+              <dt>所在城市</dt>
+              <dd>重庆</dd>
+              <dt>邮箱</dt>
+              <dd>1119157955@qq.com</dd>
+              <dt>手机</dt>
+              <dd>18328671178</dd>
+            </dl>
           </div>
         </div>
-        <footer class="media">
-          <a href="#">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-github"></use>
-            </svg>
-          </a>
-          <a href="#">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-twitter"></use>
-            </svg>
-          </a>
-          <a href="#">
-              <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-weibo11"></use>
-              </svg>
-          </a>
-          <a href="#">
-              <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-zhihu"></use>
-              </svg>
-          </a>
-          <a href="#">
-              <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-jianshu_circle"></use>
-              </svg>
-          </a>
-        </footer>
       </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo11"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-zhihu"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jianshu_circle"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
     <div class="downloadresume-wrapper">
       <a class="downloadresume" href="./郭江的简历.pdf" target="_blank" download>下载 PDF 简历</a>
     </div>
-      <p class="introduction">
+    <p class="introduction">
 
-        郭江，前端开发工程师。<br>
-        技能：html5、css3、js、vue等。
+      郭江，前端开发工程师。<br>
+      技能：html5、css3、js、vue等。
 
-      </p>
-    </main>
-    <section class="skills" id="siteSkills">
-      <h2>技能</h2>
+    </p>
+  </main>
+  <section class="skills" id="siteSkills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>HTML 5 &amp; CSS 3</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>JavaScript</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 65%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>Vue.js</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>React.js</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>Node.js</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>jQuery</h3>
+        <div class="progressBar ">
+          <div class="progress" style="width: 50%;"></div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+  <section class="portfolio" id="siteWorks">
+    <h2>作品集</h2>
+    <nav>
       <ol class="clearfix">
-        <li>
-          <h3>HTML 5 &amp; CSS 3</h3>
-          <div class="progressBar ">
-            <div class="progress" style="width: 70%;"></div>
-          </div>
-        </li>
-        <li>
-            <h3>JavaScript</h3>
-            <div class="progressBar ">
-              <div class="progress" style="width: 65%;"></div>
-            </div>
-        </li>
-        <li>
-              <h3>Vue.js</h3>
-              <div class="progressBar ">
-                <div class="progress" style="width: 70%;"></div>
-              </div>
-        </li>
-        <li>
-            <h3>React.js</h3>
-            <div class="progressBar ">
-              <div class="progress" style="width: 80%;"></div>
-            </div>
-        </li>
-        <li>
-            <h3>Node.js</h3>
-            <div class="progressBar ">
-              <div class="progress" style="width: 60%;"></div>
-            </div>
-        </li>
-        <li>
-            <h3>jQuery</h3>
-            <div class="progressBar ">
-              <div class="progress" style="width: 50%;"></div>
-            </div>
-        </li>
-        
+        <li id="portfolio1">所有</li>
+        <li id="portfolio2">框架</li>
+        <li id="portfolio3">原生JS&amp;CSS</li>
       </ol>
-    </section>
-    <section class="portfolio" id="siteWorks">
-      <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="portfolio1">所有</li>
-          <li id="portfolio2">框架</li>
-          <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-            <div class="bar-inner"></div>
-        </div>
-      </nav>
-      <script>
-        portfolio1.onclick= function(){
-          portfolioBar.className= 'bar state-1'
-        }
-        portfolio2.onclick= function(){
-          portfolioBar.className= 'bar state-2'
-        }
-        portfolio3.onclick= function(){
-          portfolioBar.className= 'bar state-3'
-        }
-      </script>
-      <div class="jobs" style="height:597px">
-        <div class="big" style="top:0; left:0">
-          <img src="./img/1.jpg" height="597px" width="570px" alt="所有">
-        </div>
-        <div class="small" style="top:0; left:606px">
-          <img src="./img/2.jpg" alt="框架">
-        </div>
-        <div class="small" style="top:319px; left:606px">
-          <img src="./img/3.jpg" alt="原生JS&amp;CSS">
-        </div>
+      <div id="portfolioBar" class="bar state-1">
+        <div class="bar-inner"></div>
       </div>
-    </section>
+    </nav>
     <script>
-      setTimeout(function(){
-      siteWelcome.classList.remove('active')},1000)
-      window.onscroll = function(xxxxx){
-        if(window.scrollY > 0){
-          topNavBar.classList.add('sticky')
-        }else{
-          topNavBar.classList.remove('sticky')
-        }
+      portfolio1.onclick = function () {
+        portfolioBar.className = 'bar state-1'
       }
-
-      //找弟弟
-      let liTags =document.querySelectorAll('nav.menu > ul > li')
-      for(let i=0;i<liTags.length;i++){
-        liTags[i].onmouseenter = function(x){
-          let li = x.currentTarget.classList.add('active')
-        }
-        liTags[i].onmouseleave = function(x){
-          let li = x.currentTarget.classList.remove('active')
-        }
-
-      let aTags = document.querySelectorAll('nav.menu > ul > li >a')
-      for(let i=0;i<aTags.length;i++){
-        aTags[i].onclick = function(x){
-          x.preventDefault()  //阻止默认动作
-          let a = x.currentTarget  //获取用户点的a标签
-          let href = a.getAttribute('href') //'siteAbout'//获取用户写的原文，没加协议
-          let element = document.querySelector(href)  //
-          let top = element.offsetTop
-          window.scrollTo(0,top-80)  //滑动到某个位置
-        }
+      portfolio2.onclick = function () {
+        portfolioBar.className = 'bar state-2'
       }
+      portfolio3.onclick = function () {
+        portfolioBar.className = 'bar state-3'
       }
     </script>
-  </body>
-</html>
+    <div class="jobs" style="height:597px">
+      <div class="big" style="top:0; left:0">
+        <img src="./img/1.jpg" height="597px" width="570px" alt="所有">
+      </div>
+      <div class="small" style="top:0; left:606px">
+        <img src="./img/2.jpg" alt="框架">
+      </div>
+      <div class="small" style="top:319px; left:606px">
+        <img src="./img/3.jpg" alt="原生JS&amp;CSS">
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+  <script>
+    setTimeout(function () {
+      siteWelcome.classList.remove('active')
+    }, 1000)
+    window.onscroll = function (xxxxx) {
+      if (window.scrollY > 0) {
+        topNavBar.classList.add('sticky')
+      } else {
+        topNavBar.classList.remove('sticky')
+      }
+    }
 
+    //找弟弟
+    let liTags = document.querySelectorAll('nav.menu > ul > li')
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        let li = x.currentTarget.classList.add('active')
+      }
+      liTags[i].onmouseleave = function (x) {
+        let li = x.currentTarget.classList.remove('active')
+      }
+    }
+
+    let aTags = document.querySelectorAll('nav.menu > ul > li >a')
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+    
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
+        x.preventDefault()  //阻止默认动作
+        let a = x.currentTarget  //获取用户点的a标签
+        let href = a.getAttribute('href') //'siteAbout'//获取用户写的原文，没加协议
+        let element = document.querySelector(href)  //
+        let top = element.offsetTop
+
+
+        let currentTop = window.scrollY
+        let targetTop = top - 80
+        let s = targetTop - currentTop // 路程
+        var coords = { y: currentTop }; // 起始位置
+        var t = Math.abs((s / 100) * 300) // 时间
+        if (t > 500) { t = 500 }
+        var tween = new TWEEN.Tween(coords) // 起始位置
+          .to({ y: targetTop }, t) // 结束位置 和 时间
+          .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
+          .onUpdate(function () {
+            // coords.y 已经变了
+            window.scrollTo(0, coords.y) // 如何更新界面
+          })
+          .start(); // 开始缓动
+      }
+
+    }
+  </script>
+</body>
+
+</html>

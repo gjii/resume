@@ -65,7 +65,7 @@ ol,ul{list-style: none;}
 .banner .mask{height: 515px;background-color: rgba(0, 0, 0, 0.5);}
 
 .usercard{border: 1px solid #cdcfd1;max-width: 900px;background: #fff;margin-right: auto;
-  margin-left: auto;box-shadow: 0px 5px 10px 0px rgba(153,153,153,1);}
+  margin-left: auto;box-shadow: 0px 0px 5px 0px rgba(153,153,153,1);}
 .usercard .welcome{background: #e6686a;color: white;display: inline-block;padding: 4px 16px 4px 16px;
   line-height: 22px;position: relative;margin-bottom: 10px;}
 .usercard .welcome .triangle{display: block;border: 10px solid transparent;width: 0;
