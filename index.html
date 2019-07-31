@@ -205,16 +205,20 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
     <script>
+        //添加屏幕位移
         let specialTages = document.querySelectorAll('[data-x]')
         for (let i = 0; i < specialTages.length; i++) {
             specialTages[i].classList.add('offset')
         }
+        //延时发动函数yyy
         setTimeout(function() {
             yyy()
         }, 1500)
+        //延时去除active样式
         setTimeout(function () {
             siteWelcome.classList.remove('active')
         }, 1000)
+        //topNavBar粘连特效
         window.onscroll = function (x) {
             if (window.scrollY > 0) {
                 topNavBar.classList.add('sticky')
@@ -223,6 +227,7 @@
             }
             yyy()
         }
+        //关联标签和内容
         function yyy(){
             let specialTages = document.querySelectorAll('[data-x]')
             let minIndex = 0
