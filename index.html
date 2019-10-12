@@ -4,26 +4,10 @@
 <head>
     <title>郭江的个人简历</title>
     <link rel="stylesheet" href="./loading.css">
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_898436_4hgx8q0s7bu.js"></script>
-    <style type="text/css">
-        .site-welcome {
-            background: #888;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .site-welcome.active {
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="./a.css">
 </head>
 
 <body>
@@ -191,114 +175,46 @@
                 portfolioBar.className = 'bar state-3'
             }
         </script>
-        <div class="jobs" style="height:597px">
-            <div class="big" style="top:0; left:0">
-                <img src="./img/1.jpg" height="597px" width="570px" alt="所有">
+        <div id="mySlides">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img src="./img/works/navpage.jpg" class="swiper-slide">
+                    <img src="./img/works/canvas.jpg" class="swiper-slide">
+                    <img src="./img/works/slides.jpg" class="swiper-slide">
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="small" style="top:0; left:606px">
-                <img src="./img/2.jpg" alt="框架">
-            </div>
-            <div class="small" style="top:319px; left:606px">
-                <img src="./img/3.jpg" alt="原生JS&amp;CSS">
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
+
+    </section>
+    <section class="message">
+        <h2>留言</h2>
+        <ol id="messageList">
+        </ol>
+        <form id="postMessageForm" style="width: 800px; margin: 50px auto;">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+            <label for="">内容</label>
+            <input type="text" name="content">
+            <input type="submit" value="提交">
+        </form>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-    <script>
-        //添加屏幕位移
-        let specialTages = document.querySelectorAll('[data-x]')
-        for (let i = 0; i < specialTages.length; i++) {
-            specialTages[i].classList.add('offset')
-        }
-        //延时发动函数yyy
-        setTimeout(function() {
-            yyy()
-        }, 1500)
-        //延时去除active样式
-        setTimeout(function () {
-            siteWelcome.classList.remove('active')
-        }, 1000)
-        //topNavBar粘连特效
-        window.onscroll = function (x) {
-            if (window.scrollY > 0) {
-                topNavBar.classList.add('sticky')
-            } else {
-                topNavBar.classList.remove('sticky')
-            }
-            yyy()
-        }
-        //关联标签和内容
-        function yyy(){
-            let specialTages = document.querySelectorAll('[data-x]')
-            let minIndex = 0
-            for (let i = 1; i < specialTages.length; i++) {
-                if (Math.abs(specialTages[i].offsetTop - window.scrollY) < Math.abs(specialTages[minIndex].offsetTop - window.scrollY)) {
-                    minIndex = i
-                }
-            }
-            for (let i = 0; i < specialTages.length; i++) {
-                specialTages[i].classList.remove('active')
-            }
-            specialTages[minIndex].classList.add('active')
-            //minIdex是里屏幕离窗口顶端最近的元素
-            specialTages[minIndex].classList.remove('offset')
-            let id = specialTages[minIndex].id
-            let a = document.querySelector('a[href="#' + id + '"]')
-            let li = a.parentNode
-            let bro = li.parentNode.children
-            for (let i = 0; i < bro.length; i++) {
-                bro[i].classList.remove('highlight')
-            }
-            li.classList.add('highlight')
-        }
-        //找弟弟
-        let liTags = document.querySelectorAll('nav.menu > ul > li')
-        for (let i = 0; i < liTags.length; i++) {
-            liTags[i].onmouseenter = function (x) {
-                let li = x.currentTarget.classList.add('active')
-            }
-            liTags[i].onmouseleave = function (x) {
-                let li = x.currentTarget.classList.remove('active')
-            }
-        }
-        let aTags = document.querySelectorAll('nav.menu > ul > li >a')
-
-        function animate(time) {
-            requestAnimationFrame(animate);
-            TWEEN.update(time);
-        }
-        requestAnimationFrame(animate);
-
-        for (let i = 0; i < aTags.length; i++) {
-            aTags[i].onclick = function (x) {
-                x.preventDefault() //阻止默认动作
-                let a = x.currentTarget //获取用户点的a标签
-                let href = a.getAttribute('href') //'siteAbout'//获取用户写的原文，没加协议
-                let element = document.querySelector(href) //
-                let top = element.offsetTop
-                let currentTop = window.scrollY
-                let targetTop = top - 80
-                let s = targetTop - currentTop // 路程
-                var coords = {
-                    y: currentTop
-                }; // 起始位置
-                var t = Math.abs((s / 100) * 300) // 时间
-                if (t > 500) {
-                    t = 500
-                }
-                var tween = new TWEEN.Tween(coords) // 起始位置
-                    .to({
-                        y: targetTop
-                    }, t) // 结束位置 和 时间
-                    .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
-                    .onUpdate(function () {
-                        // coords.y 已经变了
-                        window.scrollTo(0, coords.y) // 如何更新界面
-                    })
-                    .start(); // 开始缓动
-            }
-        }
-    </script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js"></script>
+    <!--模块化-->
+    <script src="./js/init-swiper.js"></script>
+    <script src="./js/auto-slide-up.js"></script>
+    <script src="./js/sticky-topbar.js"></script>
+    <script src="./js/smoothly-navigation.js"></script>
+    <script src="./js/message.js"></script>
 </body>
 
 </html>
